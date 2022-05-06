@@ -11,9 +11,12 @@ This action makes the following changes in repository when hotfix branch merge i
 
 ```yaml
 name: 'Damm DevOps - Gitflow hotfix branch merge'
-on: push
+on: 
+  pull_request:
+    types: [closed]
 jobs:
   build:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     name: Execute Gitflow hotfix branch merge
     steps:
