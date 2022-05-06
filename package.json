@@ -1,0 +1,35 @@
+{
+  "name": "hotfix-branch-merge",
+  "version": "1.0.0",
+  "description": "Damm DevOps - Gitflow hotfix branch merge",
+  "main": "jest.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^4.0.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3",
+    "typescript-ioc": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest-mock-extended": "^2.0.5"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devops-damm-es/hotfix-branch-merge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devops-damm-es/hotfix-branch-merge/issues"
+  },
+  "homepage": "https://github.com/devops-damm-es/hotfix-branch-merge#readme"
+}

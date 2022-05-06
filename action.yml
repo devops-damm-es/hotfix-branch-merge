@@ -1,0 +1,21 @@
+name: 'Damm DevOps - Gitflow hotfix branch merge'
+description: 'Gitflow hotfix branch merge'
+
+outputs:
+  hotfix_branch_merge_success:
+    description: 'Boolean output indicating that the repository changes have been made successfully.'
+    value: ${{ steps.run-script.outputs.hotfix_branch_merge_success }}
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '12'
+    - run: export DEFAULT_BRANCH_NAME=${{ github.event.repository.default_branch }} && export SOURCE_BRANCH_NAME=${{ github.head_ref }} && export TARGET_BRANCH_NAME=${{ github.base_ref }} && export GITHUB_TOKEN=${{ github.token }} && cd ${{ github.action_path }} && npm install && node dist/app.js
+      shell: bash
+      id: run-script
+
+branding:
+  icon: 'alert-triangle'
+  color: 'gray-dark'
