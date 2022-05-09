@@ -5,7 +5,7 @@ inputs:
   admin_pat_token:
     description: 'Admin Personal Access Token'
     required: true
-    default: ${{ secrets.ADMIN_PAT_TOKEN }}
+    default: ''
 
 outputs:
   hotfix_branch_merge_success:
