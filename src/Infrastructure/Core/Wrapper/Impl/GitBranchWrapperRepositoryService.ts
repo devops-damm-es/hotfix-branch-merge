@@ -35,13 +35,11 @@ export class GitBranchWrapperRepositoryService implements IGitBranchWrapperRepos
             try {
                 const client = github.getOctokit(gitAuthentication.token as string);
                 client.git.getRef({
-                    ref: 'refs/heads/' + sourceBranchName as string,
+                    ref: 'heads/' + sourceBranchName as string,
                     owner: gitRepository.owner as string,
                     repo: gitRepository.name as string,
                 })
                     .then(result => {
-                        console.log('result.data.object.sha: ' + result.data.object.sha);
-
                         client.git.createRef({
                             ref: 'refs/heads/' + branchName as string,
                             sha: result.data.object.sha,
@@ -50,8 +48,6 @@ export class GitBranchWrapperRepositoryService implements IGitBranchWrapperRepos
                         })
                             .then(_ => { resolve(true); })
                             .catch(_ => { reject(false); })
-
-
                     })
                     .catch(_ => { reject(false); })
             } catch {
