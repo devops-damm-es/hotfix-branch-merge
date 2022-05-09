@@ -28,7 +28,6 @@ gitBranchWrapperRepositoryService.renameGitBranch(
             gitAuthentication)
             .then(_ => {
                 console.log("Create develop from main OK");
-                
             })
             .catch(_ => {
                 console.log("Error when create develop from main");
