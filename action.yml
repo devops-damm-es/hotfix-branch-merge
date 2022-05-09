@@ -1,6 +1,12 @@
 name: 'Damm DevOps - Gitflow hotfix branch merge'
 description: 'Gitflow hotfix branch merge'
 
+inputs:
+  admin_pat_token:
+    description: 'Admin Personal Access Token'
+    required: true
+    default: ${{ secrets.ADMIN_PAT_TOKEN }}
+
 outputs:
   hotfix_branch_merge_success:
     description: 'Boolean output indicating that the repository changes have been made successfully.'
@@ -12,7 +18,7 @@ runs:
     - uses: actions/setup-node@v3
       with:
         node-version: '12'
-    - run: export DEFAULT_BRANCH_NAME=${{ github.event.repository.default_branch }} && export SOURCE_BRANCH_NAME=${{ github.head_ref }} && export TARGET_BRANCH_NAME=${{ github.base_ref }} && export PULL_REQUEST_MERGED=${{ github.event.pull_request.merged }} && export GITHUB_TOKEN=${{ github.token }} && export ADMIN_PAT_TOKEN=${{ secrets.ADMIN_PAT_TOKEN }} && cd ${{ github.action_path }} && npm install && node dist/app.js
+    - run: export DEFAULT_BRANCH_NAME=${{ github.event.repository.default_branch }} && export SOURCE_BRANCH_NAME=${{ github.head_ref }} && export TARGET_BRANCH_NAME=${{ github.base_ref }} && export PULL_REQUEST_MERGED=${{ github.event.pull_request.merged }} && export GITHUB_TOKEN=${{ github.token }} && export ADMIN_PAT_TOKEN=${{ inputs.admin_pat_token }} && cd ${{ github.action_path }} && npm install && node dist/app.js
       shell: bash
       id: run-script
 
