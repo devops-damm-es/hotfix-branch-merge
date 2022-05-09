@@ -7,4 +7,10 @@ export abstract class IGitBranchWrapperRepositoryService {
         newBranchName: String,
         gitRepository: GitRepository,
         gitAuthentication: GitAuthentication): Promise<Boolean>;
+
+    abstract createGitBranch(
+        branchName: String,
+        sourceBranchName: String,
+        gitRepository: GitRepository,
+        gitAuthentication: GitAuthentication): Promise<Boolean>;
 }

@@ -32,6 +32,35 @@ class GitBranchWrapperRepositoryService {
             });
         });
     }
+    createGitBranch(branchName, sourceBranchName, gitRepository, gitAuthentication) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise(function (resolve, reject) {
+                try {
+                    const client = github.getOctokit(gitAuthentication.token);
+                    client.git.getRef({
+                        ref: 'refs/heads/' + sourceBranchName,
+                        owner: gitRepository.owner,
+                        repo: gitRepository.name,
+                    })
+                        .then(result => {
+                        console.log('result.data.object.sha: ' + result.data.object.sha);
+                        client.git.createRef({
+                            ref: 'refs/heads/' + branchName,
+                            sha: result.data.object.sha,
+                            owner: gitRepository.owner,
+                            repo: gitRepository.name,
+                        })
+                            .then(_ => { resolve(true); })
+                            .catch(_ => { reject(false); });
+                    })
+                        .catch(_ => { reject(false); });
+                }
+                catch (_a) {
+                    reject(false);
+                }
+            });
+        });
+    }
 }
 exports.GitBranchWrapperRepositoryService = GitBranchWrapperRepositoryService;
 //# sourceMappingURL=GitBranchWrapperRepositoryService.js.map
