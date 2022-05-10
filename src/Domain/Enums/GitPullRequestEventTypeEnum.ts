@@ -1,0 +1,19 @@
+export enum GitPullRequestEventTypeEnum {
+    Assigned,
+    Unassigned,
+    Labeled,
+    Unlabeled,
+    Opened,
+    Edited,
+    Closed,
+    Reopened,
+    Synchronize,
+    ConvertedToDraft,
+    ReadyForReview,
+    Locked,
+    Unlocked,
+    ReviewRequested,
+    ReviewRequestRemoved,
+    AutoMergeEnabled,
+    AutoMergeDisabled
+}
