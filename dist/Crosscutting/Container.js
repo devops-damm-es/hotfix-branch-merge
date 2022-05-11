@@ -7,6 +7,7 @@ const IGitAuthenticationApplicationService_1 = require("../Application/Core/IGit
 const IGitBranchApplicationService_1 = require("../Application/Core/IGitBranchApplicationService");
 const IGitDefaultBranchNameApplicationService_1 = require("../Application/Core/IGitDefaultBranchNameApplicationService");
 const IGitEventApplicationService_1 = require("../Application/Core/IGitEventApplicationService");
+const IGitPullRequestApplicationService_1 = require("../Application/Core/IGitPullRequestApplicationService");
 const IGitRepositoryApplicationService_1 = require("../Application/Core/IGitRepositoryApplicationService");
 const IGitSourceBranchNameApplicationService_1 = require("../Application/Core/IGitSourceBranchNameApplicationService");
 const IGitTargetBranchNameApplicationService_1 = require("../Application/Core/IGitTargetBranchNameApplicationService");
@@ -15,6 +16,7 @@ const GitAuthenticationApplicationService_1 = require("../Application/Core/Impl/
 const GitBranchApplicationService_1 = require("../Application/Core/Impl/GitBranchApplicationService");
 const GitDefaultBranchNameApplicationService_1 = require("../Application/Core/Impl/GitDefaultBranchNameApplicationService");
 const GitEventApplicationService_1 = require("../Application/Core/Impl/GitEventApplicationService");
+const GitPullRequestApplicationService_1 = require("../Application/Core/Impl/GitPullRequestApplicationService");
 const GitRepositoryApplicationService_1 = require("../Application/Core/Impl/GitRepositoryApplicationService");
 const GitSourceBranchNameApplicationService_1 = require("../Application/Core/Impl/GitSourceBranchNameApplicationService");
 const GitTargetBranchNameApplicationService_1 = require("../Application/Core/Impl/GitTargetBranchNameApplicationService");
@@ -23,6 +25,7 @@ const IGitAuthenticationDomainService_1 = require("../Domain/Services/Core/IGitA
 const IGitBranchDomainService_1 = require("../Domain/Services/Core/IGitBranchDomainService");
 const IGitDefaultBranchNameDomainService_1 = require("../Domain/Services/Core/IGitDefaultBranchNameDomainService");
 const IGitEventDomainService_1 = require("../Domain/Services/Core/IGitEventDomainService");
+const IGitPullRequestDomainService_1 = require("../Domain/Services/Core/IGitPullRequestDomainService");
 const IGitRepositoryDomainService_1 = require("../Domain/Services/Core/IGitRepositoryDomainService");
 const IGitSourceBranchNameDomainService_1 = require("../Domain/Services/Core/IGitSourceBranchNameDomainService");
 const IGitTargetBranchNameDomainService_1 = require("../Domain/Services/Core/IGitTargetBranchNameDomainService");
@@ -31,6 +34,7 @@ const GitAuthenticationDomainService_1 = require("../Domain/Services/Core/Impl/G
 const GitBranchDomainService_1 = require("../Domain/Services/Core/Impl/GitBranchDomainService");
 const GitDefaultBranchNameDomainService_1 = require("../Domain/Services/Core/Impl/GitDefaultBranchNameDomainService");
 const GitEventDomainService_1 = require("../Domain/Services/Core/Impl/GitEventDomainService");
+const GitPullRequestDomainService_1 = require("../Domain/Services/Core/Impl/GitPullRequestDomainService");
 const GitRepositoryDomainService_1 = require("../Domain/Services/Core/Impl/GitRepositoryDomainService");
 const GitSourceBranchNameDomainService_1 = require("../Domain/Services/Core/Impl/GitSourceBranchNameDomainService");
 const GitTargetBranchNameDomainService_1 = require("../Domain/Services/Core/Impl/GitTargetBranchNameDomainService");
@@ -39,6 +43,7 @@ const IGitAuthenticationRepositoryService_1 = require("../Infrastructure/Core/IG
 const IGitBranchRepositoryService_1 = require("../Infrastructure/Core/IGitBranchRepositoryService");
 const IGitDefaultBranchNameRepositoryService_1 = require("../Infrastructure/Core/IGitDefaultBranchNameRepositoryService");
 const IGitEventRepositoryService_1 = require("../Infrastructure/Core/IGitEventRepositoryService");
+const IGitPullRequestRepositoryService_1 = require("../Infrastructure/Core/IGitPullRequestRepositoryService");
 const IGitRepositoryRepositoryService_1 = require("../Infrastructure/Core/IGitRepositoryRepositoryService");
 const IGitSourceBranchNameRepositoryService_1 = require("../Infrastructure/Core/IGitSourceBranchNameRepositoryService");
 const IGitTargetBranchNameRepositoryService_1 = require("../Infrastructure/Core/IGitTargetBranchNameRepositoryService");
@@ -47,6 +52,7 @@ const GitAuthenticationRepositoryService_1 = require("../Infrastructure/Core/Imp
 const GitBranchRepositoryService_1 = require("../Infrastructure/Core/Impl/GitBranchRepositoryService");
 const GitDefaultBranchNameRepositoryService_1 = require("../Infrastructure/Core/Impl/GitDefaultBranchNameRepositoryService");
 const GitEventRepositoryService_1 = require("../Infrastructure/Core/Impl/GitEventRepositoryService");
+const GitPullRequestRepositoryService_1 = require("../Infrastructure/Core/Impl/GitPullRequestRepositoryService");
 const GitRepositoryRepositoryService_1 = require("../Infrastructure/Core/Impl/GitRepositoryRepositoryService");
 const GitSourceBranchNameRepositoryService_1 = require("../Infrastructure/Core/Impl/GitSourceBranchNameRepositoryService");
 const GitTargetBranchNameRepositoryService_1 = require("../Infrastructure/Core/Impl/GitTargetBranchNameRepositoryService");
@@ -55,6 +61,7 @@ const IGitAuthenticationWrapperRepositoryService_1 = require("../Infrastructure/
 const IGitBranchWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/IGitBranchWrapperRepositoryService");
 const IGitDefaultBranchNameWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/IGitDefaultBranchNameWrapperRepositoryService");
 const IGitEventWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/IGitEventWrapperRepositoryService");
+const IGitPullRequestWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/IGitPullRequestWrapperRepositoryService");
 const IGitRepositoryWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/IGitRepositoryWrapperRepositoryService");
 const IGitSourceBranchNameWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/IGitSourceBranchNameWrapperRepositoryService");
 const IGitTargetBranchNameWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/IGitTargetBranchNameWrapperRepositoryService");
@@ -63,6 +70,7 @@ const GitAuthenticationWrapperRepositoryService_1 = require("../Infrastructure/C
 const GitBranchWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/Impl/GitBranchWrapperRepositoryService");
 const GitDefaultBranchNameWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/Impl/GitDefaultBranchNameWrapperRepositoryService");
 const GitEventWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/Impl/GitEventWrapperRepositoryService");
+const GitPullRequestWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/Impl/GitPullRequestWrapperRepositoryService");
 const GitRepositoryWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/Impl/GitRepositoryWrapperRepositoryService");
 const GitSourceBranchNameWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/Impl/GitSourceBranchNameWrapperRepositoryService");
 const GitTargetBranchNameWrapperRepositoryService_1 = require("../Infrastructure/Core/Wrapper/Impl/GitTargetBranchNameWrapperRepositoryService");
@@ -74,6 +82,7 @@ class IoCContainer {
         typescript_ioc_1.Container.bind(IGitBranchApplicationService_1.IGitBranchApplicationService).to(GitBranchApplicationService_1.GitBranchApplicationService);
         typescript_ioc_1.Container.bind(IGitDefaultBranchNameApplicationService_1.IGitDefaultBranchNameApplicationService).to(GitDefaultBranchNameApplicationService_1.GitDefaultBranchNameApplicationService);
         typescript_ioc_1.Container.bind(IGitEventApplicationService_1.IGitEventApplicationService).to(GitEventApplicationService_1.GitEventApplicationService);
+        typescript_ioc_1.Container.bind(IGitPullRequestApplicationService_1.IGitPullRequestApplicationService).to(GitPullRequestApplicationService_1.GitPullRequestApplicationService);
         typescript_ioc_1.Container.bind(IGitRepositoryApplicationService_1.IGitRepositoryApplicationService).to(GitRepositoryApplicationService_1.GitRepositoryApplicationService);
         typescript_ioc_1.Container.bind(IGitSourceBranchNameApplicationService_1.IGitSourceBranchNameApplicationService).to(GitSourceBranchNameApplicationService_1.GitSourceBranchNameApplicationService);
         typescript_ioc_1.Container.bind(IGitTargetBranchNameApplicationService_1.IGitTargetBranchNameApplicationService).to(GitTargetBranchNameApplicationService_1.GitTargetBranchNameApplicationService);
@@ -83,6 +92,7 @@ class IoCContainer {
         typescript_ioc_1.Container.bind(IGitBranchDomainService_1.IGitBranchDomainService).to(GitBranchDomainService_1.GitBranchDomainService);
         typescript_ioc_1.Container.bind(IGitDefaultBranchNameDomainService_1.IGitDefaultBranchNameDomainService).to(GitDefaultBranchNameDomainService_1.GitDefaultBranchNameDomainService);
         typescript_ioc_1.Container.bind(IGitEventDomainService_1.IGitEventDomainService).to(GitEventDomainService_1.GitEventDomainService);
+        typescript_ioc_1.Container.bind(IGitPullRequestDomainService_1.IGitPullRequestDomainService).to(GitPullRequestDomainService_1.GitPullRequestDomainService);
         typescript_ioc_1.Container.bind(IGitRepositoryDomainService_1.IGitRepositoryDomainService).to(GitRepositoryDomainService_1.GitRepositoryDomainService);
         typescript_ioc_1.Container.bind(IGitSourceBranchNameDomainService_1.IGitSourceBranchNameDomainService).to(GitSourceBranchNameDomainService_1.GitSourceBranchNameDomainService);
         typescript_ioc_1.Container.bind(IGitTargetBranchNameDomainService_1.IGitTargetBranchNameDomainService).to(GitTargetBranchNameDomainService_1.GitTargetBranchNameDomainService);
@@ -92,6 +102,7 @@ class IoCContainer {
         typescript_ioc_1.Container.bind(IGitBranchRepositoryService_1.IGitBranchRepositoryService).to(GitBranchRepositoryService_1.GitBranchRepositoryService);
         typescript_ioc_1.Container.bind(IGitDefaultBranchNameRepositoryService_1.IGitDefaultBranchNameRepositoryService).to(GitDefaultBranchNameRepositoryService_1.GitDefaultBranchNameRepositoryService);
         typescript_ioc_1.Container.bind(IGitEventRepositoryService_1.IGitEventRepositoryService).to(GitEventRepositoryService_1.GitEventRepositoryService);
+        typescript_ioc_1.Container.bind(IGitPullRequestRepositoryService_1.IGitPullRequestRepositoryService).to(GitPullRequestRepositoryService_1.GitPullRequestRepositoryService);
         typescript_ioc_1.Container.bind(IGitRepositoryRepositoryService_1.IGitRepositoryRepositoryService).to(GitRepositoryRepositoryService_1.GitRepositoryRepositoryService);
         typescript_ioc_1.Container.bind(IGitSourceBranchNameRepositoryService_1.IGitSourceBranchNameRepositoryService).to(GitSourceBranchNameRepositoryService_1.GitSourceBranchNameRepositoryService);
         typescript_ioc_1.Container.bind(IGitTargetBranchNameRepositoryService_1.IGitTargetBranchNameRepositoryService).to(GitTargetBranchNameRepositoryService_1.GitTargetBranchNameRepositoryService);
@@ -100,6 +111,7 @@ class IoCContainer {
         typescript_ioc_1.Container.bind(IGitBranchWrapperRepositoryService_1.IGitBranchWrapperRepositoryService).to(GitBranchWrapperRepositoryService_1.GitBranchWrapperRepositoryService);
         typescript_ioc_1.Container.bind(IGitDefaultBranchNameWrapperRepositoryService_1.IGitDefaultBranchNameWrapperRepositoryService).to(GitDefaultBranchNameWrapperRepositoryService_1.GitDefaultBranchNameWrapperRepositoryService);
         typescript_ioc_1.Container.bind(IGitEventWrapperRepositoryService_1.IGitEventWrapperRepositoryService).to(GitEventWrapperRepositoryService_1.GitEventWrapperRepositoryService);
+        typescript_ioc_1.Container.bind(IGitPullRequestWrapperRepositoryService_1.IGitPullRequestWrapperRepositoryService).to(GitPullRequestWrapperRepositoryService_1.GitPullRequestWrapperRepositoryService);
         typescript_ioc_1.Container.bind(IGitRepositoryWrapperRepositoryService_1.IGitRepositoryWrapperRepositoryService).to(GitRepositoryWrapperRepositoryService_1.GitRepositoryWrapperRepositoryService);
         typescript_ioc_1.Container.bind(IGitSourceBranchNameWrapperRepositoryService_1.IGitSourceBranchNameWrapperRepositoryService).to(GitSourceBranchNameWrapperRepositoryService_1.GitSourceBranchNameWrapperRepositoryService);
         typescript_ioc_1.Container.bind(IGitTargetBranchNameWrapperRepositoryService_1.IGitTargetBranchNameWrapperRepositoryService).to(GitTargetBranchNameWrapperRepositoryService_1.GitTargetBranchNameWrapperRepositoryService);
