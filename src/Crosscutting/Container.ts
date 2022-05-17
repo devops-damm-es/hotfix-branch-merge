@@ -23,6 +23,7 @@ import { IGitBranchDomainService } from "../Domain/Services/Core/IGitBranchDomai
 import { IGitDefaultBranchNameDomainService } from "../Domain/Services/Core/IGitDefaultBranchNameDomainService";
 import { IGitEventBusinessRuleDomainService } from "../Domain/Services/Core/IGitEventBusinessRuleDomainService";
 import { IGitEventDomainService } from "../Domain/Services/Core/IGitEventDomainService";
+import { IGitPullRequestBusinessRuleDomainService } from "../Domain/Services/Core/IGitPullRequestBusinessRuleDomainService";
 import { IGitPullRequestDomainService } from "../Domain/Services/Core/IGitPullRequestDomainService";
 import { IGitPullRequestEventBusinessRuleDomainService } from "../Domain/Services/Core/IGitPullRequestEventBusinessRuleDomainService";
 import { IGitRepositoryDomainService } from "../Domain/Services/Core/IGitRepositoryDomainService";
@@ -34,6 +35,7 @@ import { GitBranchDomainService } from "../Domain/Services/Core/Impl/GitBranchDo
 import { GitDefaultBranchNameDomainService } from "../Domain/Services/Core/Impl/GitDefaultBranchNameDomainService";
 import { GitEventBusinessRuleDomainService } from "../Domain/Services/Core/Impl/GitEventBusinessRuleDomainService";
 import { GitEventDomainService } from "../Domain/Services/Core/Impl/GitEventDomainService";
+import { GitPullRequestBusinessRuleDomainService } from "../Domain/Services/Core/Impl/GitPullRequestBusinessRuleDomainService";
 import { GitPullRequestDomainService } from "../Domain/Services/Core/Impl/GitPullRequestDomainService";
 import { GitPullRequestEventBusinessRuleDomainService } from "../Domain/Services/Core/Impl/GitPullRequestEventBusinessRuleDomainService";
 import { GitRepositoryDomainService } from "../Domain/Services/Core/Impl/GitRepositoryDomainService";
@@ -99,6 +101,7 @@ export class IoCContainer {
         Container.bind(IGitDefaultBranchNameDomainService).to(GitDefaultBranchNameDomainService);
         Container.bind(IGitEventBusinessRuleDomainService).to(GitEventBusinessRuleDomainService);
         Container.bind(IGitEventDomainService).to(GitEventDomainService);
+        Container.bind(IGitPullRequestBusinessRuleDomainService).to(GitPullRequestBusinessRuleDomainService);
         Container.bind(IGitPullRequestDomainService).to(GitPullRequestDomainService);
         Container.bind(IGitPullRequestEventBusinessRuleDomainService).to(GitPullRequestEventBusinessRuleDomainService);
         Container.bind(IGitRepositoryDomainService).to(GitRepositoryDomainService);
