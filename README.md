@@ -25,6 +25,10 @@ jobs:
 ```
 # Output Variables
 
+## is_hotfix_branch_merge
+
+Boolean output indicating that is hotfix branch merge.
+
 ## hotfix_branch_merge_success
 
 Boolean output indicating that the repository changes have been made successfully.

@@ -22,6 +22,9 @@ let ActionResultRepositoryService = class ActionResultRepositoryService {
     setActionResult(success, message) {
         this.actionResultWrapperRepositoryService.setActionResult(success, message);
     }
+    omitActionResult(message) {
+        this.actionResultWrapperRepositoryService.omitActionResult(message);
+    }
 };
 ActionResultRepositoryService = __decorate([
     __param(0, typescript_ioc_1.Inject),

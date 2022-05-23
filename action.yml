@@ -8,6 +8,10 @@ inputs:
     default: ''
 
 outputs:
+  is_hotfix_branch_merge:
+    description: 'Boolean output indicating that is hotfix branch merge.'
+    value: ${{ steps.run-script.outputs.is_hotfix_branch_merge }}
+
   hotfix_branch_merge_success:
     description: 'Boolean output indicating that the repository changes have been made successfully.'
     value: ${{ steps.run-script.outputs.hotfix_branch_merge_success }}

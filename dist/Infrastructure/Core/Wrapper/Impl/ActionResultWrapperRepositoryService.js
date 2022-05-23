@@ -5,6 +5,7 @@ const core = require("@actions/core");
 class ActionResultWrapperRepositoryService {
     setActionResult(success, message) {
         try {
+            core.setOutput("is_hotfix_branch_merge", true);
             core.setOutput("hotfix_branch_merge_success", success);
             if (success == true) {
                 core.info(message);
@@ -12,6 +13,13 @@ class ActionResultWrapperRepositoryService {
             else {
                 core.setFailed(message);
             }
+        }
+        catch (_a) { }
+    }
+    omitActionResult(message) {
+        try {
+            core.setOutput("is_hotfix_branch_merge", false);
+            core.info(message);
         }
         catch (_a) { }
     }

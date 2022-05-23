@@ -13,4 +13,8 @@ export class ActionResultRepositoryService implements IActionResultRepositorySer
     setActionResult(success: Boolean, message: String) {
         this.actionResultWrapperRepositoryService.setActionResult(success, message);
     }
+
+    omitActionResult(message: String) {
+        this.actionResultWrapperRepositoryService.omitActionResult(message);
+    }
 }

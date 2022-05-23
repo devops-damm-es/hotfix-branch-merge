@@ -13,4 +13,8 @@ export class ActionResultApplicationService implements IActionResultApplicationS
     setActionResult(success: Boolean, message: String) {
         this.actionResultDomainService.getRepositoryService().setActionResult(success, message);
     }
+
+    omitActionResult(message: String) {
+        this.actionResultDomainService.getRepositoryService().omitActionResult(message);
+    }
 }

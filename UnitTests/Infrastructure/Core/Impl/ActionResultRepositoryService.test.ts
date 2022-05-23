@@ -16,7 +16,20 @@ test("setActionResult_Ok", () => {
   expect(mockActionResultWrapperRepositoryService.setActionResult).toBeCalledTimes(1);
 });
 
+test("omitActionResult_Ok", () => {
+  // Arrange
+  let sut = new ActionResultRepositoryService(mockActionResultWrapperRepositoryService);
+
+  // Act
+  var result = sut.omitActionResult("message");
+
+  // Assert
+  expect(mockActionResultWrapperRepositoryService.omitActionResult).toBeCalledTimes(1);
+});
+
 const mockActionResultWrapperRepositoryService: jest.Mocked<IActionResultWrapperRepositoryService> = {
   setActionResult: jest.fn().mockImplementation(() => {
+  }),
+  omitActionResult: jest.fn().mockImplementation(() => {
   })
 };
