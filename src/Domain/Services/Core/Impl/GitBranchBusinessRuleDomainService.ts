@@ -3,6 +3,8 @@ import { IGitBranchBusinessRuleDomainService } from "../IGitBranchBusinessRuleDo
 export class GitBranchBusinessRuleDomainService implements IGitBranchBusinessRuleDomainService {
 
     getFeatureBranchNameFromHotfixBranchName(hotfixBranchName: String): String {
-        return "feature/" + hotfixBranchName; //TODO: Add random string
+        var timestamp = new Date().getTime().toString();
+        var branchName = hotfixBranchName.substring("hotfix/".length, hotfixBranchName.length);
+        return "feature/" + branchName + "_" + timestamp;
     }
 }
