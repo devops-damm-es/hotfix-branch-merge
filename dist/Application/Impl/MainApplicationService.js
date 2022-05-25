@@ -65,12 +65,13 @@ let MainApplicationService = class MainApplicationService {
                     var gitTargetBranchName = this.gitTargetBranchNameApplicationService.getGitTargetBranchName();
                     if (this.gitPullRequestBusinessRuleDomainService.isHotfixBranchMerge(gitSourceBranchName, gitTargetBranchName, gitDefaultBranchName)) {
                         if (this.gitPullRequestApplicationService.isPullRequestMerged()) {
+                            var developBranchName = "develop";
                             var featureBranchName = this.gitBranchBusinessRuleDomainService.getFeatureBranchNameFromHotfixBranchName(gitSourceBranchName);
                             var gitAuthentication = this.gitAuthenticationApplicationService.getGitAuthentication();
                             var gitRepository = this.gitRepositoryApplicationService.getGitRepository();
-                            this.gitBranchApplicationService.renameGitBranch('develop', featureBranchName, gitRepository, gitAuthentication)
+                            this.gitBranchApplicationService.renameGitBranch(developBranchName, featureBranchName, gitRepository, gitAuthentication)
                                 .then(_ => {
-                                this.gitBranchApplicationService.createGitBranch('develop', gitDefaultBranchName, gitRepository, gitAuthentication)
+                                this.gitBranchApplicationService.createGitBranch(developBranchName, gitDefaultBranchName, gitRepository, gitAuthentication)
                                     .then(_ => {
                                     this.actionResultApplicationService.setActionResult(true, "Hotfix branch merge success");
                                 })

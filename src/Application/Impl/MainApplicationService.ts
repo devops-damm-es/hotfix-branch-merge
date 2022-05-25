@@ -79,18 +79,19 @@ export class MainApplicationService implements IMainApplicationService {
 
                 if (this.gitPullRequestBusinessRuleDomainService.isHotfixBranchMerge(gitSourceBranchName, gitTargetBranchName, gitDefaultBranchName)) {
                     if (this.gitPullRequestApplicationService.isPullRequestMerged()) {
+                        var developBranchName = "develop";
                         var featureBranchName = this.gitBranchBusinessRuleDomainService.getFeatureBranchNameFromHotfixBranchName(gitSourceBranchName);
                         var gitAuthentication = this.gitAuthenticationApplicationService.getGitAuthentication();
                         var gitRepository = this.gitRepositoryApplicationService.getGitRepository();
 
                         this.gitBranchApplicationService.renameGitBranch(
-                            'develop',
+                            developBranchName,
                             featureBranchName,
                             gitRepository,
                             gitAuthentication)
                             .then(_ => {
                                 this.gitBranchApplicationService.createGitBranch(
-                                    'develop',
+                                    developBranchName,
                                     gitDefaultBranchName,
                                     gitRepository,
                                     gitAuthentication)
