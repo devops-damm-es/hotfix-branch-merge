@@ -30,7 +30,6 @@ export class MainApplicationService implements IMainApplicationService {
     private gitAuthenticationApplicationService: IGitAuthenticationApplicationService;
     private gitRepositoryApplicationService: IGitRepositoryApplicationService;
     private gitBranchApplicationService: IGitBranchApplicationService;
-
     private actionResultApplicationService: IActionResultApplicationService;
 
     constructor(
@@ -47,7 +46,6 @@ export class MainApplicationService implements IMainApplicationService {
         @Inject gitAuthenticationApplicationService: IGitAuthenticationApplicationService,
         @Inject gitRepositoryApplicationService: IGitRepositoryApplicationService,
         @Inject gitBranchApplicationService: IGitBranchApplicationService,
-
         @Inject actionResultApplicationService: IActionResultApplicationService) {
         this.gitEventApplicationService = gitEventApplicationService;
         this.gitEventBusinessRuleDomainService = gitEventBusinessRuleDomainService;
@@ -62,7 +60,6 @@ export class MainApplicationService implements IMainApplicationService {
         this.gitAuthenticationApplicationService = gitAuthenticationApplicationService;
         this.gitRepositoryApplicationService = gitRepositoryApplicationService;
         this.gitBranchApplicationService = gitBranchApplicationService;
-
         this.actionResultApplicationService = actionResultApplicationService;
     }
 
