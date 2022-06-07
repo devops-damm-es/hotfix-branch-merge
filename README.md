@@ -22,7 +22,15 @@ jobs:
     steps:
       - name: Execute Gitflow hotfix branch merge
         uses: devops-damm-es/hotfix-branch-merge@v1.0.0
+        with:
+          admin_pat_token: ${{ secrets.ADMIN_PAT_TOKEN }}
 ```
+# Input Variables
+
+## admin_pat_token
+
+Admin Personal Access Token
+
 # Output Variables
 
 ## is_hotfix_branch_merge
