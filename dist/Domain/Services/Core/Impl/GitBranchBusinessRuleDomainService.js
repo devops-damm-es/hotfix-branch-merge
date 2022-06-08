@@ -5,7 +5,7 @@ class GitBranchBusinessRuleDomainService {
     getFeatureBranchNameFromHotfixBranchName(hotfixBranchName) {
         var timestamp = new Date().getTime().toString();
         var branchName = hotfixBranchName.substring("hotfix/".length, hotfixBranchName.length);
-        return "feature/" + branchName + "_" + timestamp;
+        return "feature/Develop_branch_until_hotfix_" + branchName + "_" + timestamp;
     }
 }
 exports.GitBranchBusinessRuleDomainService = GitBranchBusinessRuleDomainService;
